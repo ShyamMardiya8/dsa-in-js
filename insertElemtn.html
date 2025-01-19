@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <div>
+    <h1>custom function create to data add in element</h1>
+    <input type="number" id="text">
+    <button onclick="handleClick()">click to data add in array</button>
+    <ul id="ul">
+    </ul>
+ </div>
+    <script>
+    const array = [1,0,9,5,7,8]
+    console.log(array)
+    let text = document.getElementById("text")
+    let li = document.getElementById("ul")
+    function handleClick(){
+        alert(text.value)
+        customPush(array, text.value)
+        for (let i = 0; i < array.length; i++) {
+           let child = `<li>${array[i]}</li>`
+           li.innerHTML += child
+        }
+    }
+    function customPush(array, value){
+        if (array.length) {
+            let index = array.length + 1
+            array[index] = value
+        }        
+    }
+    </script>
+</body>
+</html>
