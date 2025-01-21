@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="number" id="value" placeholder="enter a value">
+<input type="number" id="index" placeholder="enter a index">
+<button onclick="handleClick()">send value in array</button>
+
+<body>
+
+    <script>
+        let element = document.getElementById("value")
+        let index = document.getElementById("index")
+        // function handleClick() {
+        //     console.log("element", element.value)
+        //     console.log("index", index)
+        //     let array = [1, 2, 3, 4, 6, 78, 9]
+        //     let newElement = 90
+        //     let position = 6
+        //     for (let i = array.length - 1; i > 0; i--) {
+        //         if (i >= index.value) {
+        //             array[i + 1] = array[i]
+        //             if (i == index.value) {
+        //                 array[i] = parseInt(element.value)
+        //             }
+        //         }
+                
+        //     }
+        //     if (index.value > array.length){
+        //             alert("not space of in array")
+        //         }
+        //     console.log(array)
+        // }
+            
+        // second method to create splice
+            function handleClick(){
+                let array = [1, 2, 3, 4, 6, 78, 9]
+            array.splice(index.value,0,parseInt(element.value))
+            console.log(array)
+            }
+    </script>
+</body>
+
+</html>
