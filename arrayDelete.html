@@ -6,14 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="number" id="delete" >
+    <button onclick="handleClick()">handleDelete</button>
     <script>
-        let array = [1,2,4,5,6,77,88]
-        let position = 5
-        for (let i = position; i < array.length - 1; i++) {
+        
+        const deleteValue = document.getElementById("delete")
+
+        function handleClick(){
+            let array = [1,2,4,5,6,77,88]
+        for (let i = parseInt(deleteValue.value); i < array.length - 1; i++) {
             array[i] = array[i+1]
         }
-        array.length = array.length - 1 
+        array.length = array.length - 1
         console.log(array)
+        } 
     </script>
 </body>
 </html>
