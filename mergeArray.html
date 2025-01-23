@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [1,2,4,4,5,6,7,8,99,122]
+        let array2 = [2,3,5,7]
+        let arr = []
+        for (let i = 0; i < array1.length; i++) {
+            arr[i] = array1[i]            
+        }
+        for (let i = 0; i < array2.length; i++) {
+            arr[array1.length + i] = array2[i]             
+        }
+        console.log(arr)
+
+        // another method to combine array using spread operator 
+        const arrValue = [...array1, ...array2]
+        console.log("using spread operator :",arrValue)
+    </script>
+</body>
+</html>
