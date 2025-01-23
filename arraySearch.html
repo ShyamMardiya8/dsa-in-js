@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            const array = [15,21,32,4,25,40,25]
+            let position = 25
+            const sameValue = []
+            let index = undefined
+            for (let i = 0; i < array.length ; i++) {
+                if (array[i] === position) {
+                    sameValue.push(i)
+                    
+                }
+            }
+            console.log("value is :",sameValue.toString())
+
+            // inbuild search method in js
+            console.log(array.indexOf(25))
+    </script>
+</body>
+</html>
